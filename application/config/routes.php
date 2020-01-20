@@ -14,3 +14,5 @@ $route['Demo'] = 'Demo_controller';
 $route['tusencuestas'] = 'Encuesta_controller/tusencuestas';
 $route['resolverencuesta/(:any)'] = 'Encuesta_controller/resolverencuesta/$1';
 $route['guardarEncuesta'] = 'Encuesta_controller/guardarEncuesta';
+$route['nuevaencuesta'] = 'Encuesta_controller/nuevaencuesta';
+$route['guardarEncuestaNueva'] = 'Encuesta_controller/guardarEncuestaNueva';
