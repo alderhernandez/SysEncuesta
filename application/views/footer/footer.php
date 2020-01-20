@@ -19,7 +19,7 @@
     </div>
 
     <!-- jQuery -->
-    
+    <script src="<?php echo base_url()?>assets/js/jquery.js"></script>
     <!-- Bootstrap -->
     <script src="<?php echo base_url()?>assets/js/bootstrap.bundle.min.js"></script>
     <script src="<?php echo base_url()?>assets/js/jquery.dataTables.js"></script>
@@ -32,8 +32,12 @@
     <script src="<?php echo base_url()?>assets/js/bootstrap-progressbar.min.js"></script>
    <script src="<?php echo base_url()?>assets/js/jquery.mCustomScrollbar.concat.min.js"></script>
 
+
     <!-- Custom Theme Scripts -->
+    <script src="<?php echo base_url()?>assets/js/chart/Chart.min.js"></script>
     <script src="<?php echo base_url()?>assets/js/custom.min.js"></script>
+
+
 
   </body>
 </html>

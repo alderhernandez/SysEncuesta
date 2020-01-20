@@ -26,10 +26,12 @@
     <link href="<?php echo base_url()?>assets/css/sweetalert2.min.css" rel="stylesheet">
     <link href="<?php echo base_url()?>assets/css/nprogress.css" rel="stylesheet">
 	<link href="<?php echo base_url()?>assets/css/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="<?php echo base_url()?>assets/css/chart/Chart.min.css">>
+	
 
     <!-- Custom Theme Style -->
     <link href="<?php echo base_url()?>assets/css/custom.min.css" rel="stylesheet">
     <script src="<?php echo base_url()?>assets/js/jquery.min.js"></script>
     <script src="<?php echo base_url()?>assets/js/sweetalert2.min.js"></script>
-    
+
   </head>
