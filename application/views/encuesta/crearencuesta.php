@@ -126,6 +126,12 @@
 <script>
 	$(document).ready(function(){
 		//$('#modalAgregar').modal('show');
+		$('#modalAgregar').on('hidden.bs.modal', function (e) {
+			//alert("asdsad")
+		  	$('#txtPregunta').val('');
+			$("#selectTipo").val('-1');
+			$('#txtDescPregunta').val('');
+		})
 	});
 
 	$('#btnAgregar').click(function(){
@@ -219,12 +225,7 @@
                 
     });
 
-	$('#modalAgregar').on('hidden.bs.modal', function (e) {
-		//alert("asdsad")
-	  	$('#txtPregunta').val('');
-		$("#selectTipo").val('-1');
-		$('#txtDescPregunta').val('');
-	})
+	
 
 	$('#btnGuardar').click(function(){
 		try{
@@ -291,6 +292,7 @@
 					data: form_data,
 					success: function(data)
 					{
+						$('#btnGuardar').prop('disabled',true);
 						$("#loading").modal("hide");
 						let obj = jQuery.parseJSON(data);
 						$.each(obj, function(index, val) {
@@ -303,7 +305,7 @@
 							allowOutsideClick: false
 						}).then((result)=>{
 							if (tipo == 'success') {
-								//window.location.href = "reporte_10";
+								window.location.href = "<?php echo base_url("index.php/nuevaencuesta")?>";
 							}
 						});
 					},error:function(){
@@ -313,6 +315,7 @@
 							allowOutsideClick: false
 						});
 						$("#loading").modal("hide");
+						$('#btnGuardar').prop('disabled',false);
 					}
 				});
 			
