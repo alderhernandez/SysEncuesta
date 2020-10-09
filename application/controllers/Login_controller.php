@@ -38,13 +38,13 @@ class Login_controller extends CI_Controller {
             else {
                 $sessiondata = array(
                     'id' => $data['user'][0]['IDUSUARIO'],
-										'usuario' => $data['user'][0]['USUARIO'],
-										'nombre' => $data['user'][0]['NOMBRE'],
-										'apellido' => $data['user'][0]['APELLIDO'],
+                    'usuario' => $data['user'][0]['USUARIO'],
+                    'nombre' => $data['user'][0]['NOMBRE'],
+                    'apellido' => $data['user'][0]['APELLIDO'],
                     'sexo' => $data['user'][0]['SEXO'],
-										'estado' => $data["user"][0]["ESTADO"],
-										'telefono' => $data["user"][0]["TELEFONO"],
-										'correo' => $data["user"][0]["CORREO"],
+                    'estado' => $data["user"][0]["ESTADO"],
+                    'telefono' => $data["user"][0]["TELEFONO"],
+                    'correo' => $data["user"][0]["CORREO"],
                     'logged' => 1
                 );
                 $this->session->set_userdata($sessiondata);

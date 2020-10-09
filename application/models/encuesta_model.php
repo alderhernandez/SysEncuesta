@@ -14,6 +14,12 @@ class encuesta_model extends CI_Model
         
         $query = $this->db->where('estado', 'act')->get('Encuestas');
 
+        $id = $this->session->userdata('id');
+
+        /*if ($id != 1) {
+            $query = $this->db->where('estado', 'act')->where('IdEncuesta', '=', '1007')->get('Encuestas');            
+        }*/
+
         if ($query->num_rows()> 0) {
             return $query->result_array();
         }

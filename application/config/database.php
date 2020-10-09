@@ -5,9 +5,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '192.168.1.9',
+	'hostname' => 'localhost',
 	'username' => 'sa',
-	'password' => 'Delmor2k18!',
+	'password' => '123',
 	'database' => 'SysEncuesta',
 	'dbdriver' => 'sqlsrv',//'mysqli',
 	'dbprefix' => '',
