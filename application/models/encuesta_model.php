@@ -83,7 +83,7 @@ class encuesta_model extends CI_Model
         date_default_timezone_set("America/Managua");
         $mensaje = array();
 
-
+        $idencuestado = null;
 
 
         $bandera=false;
@@ -98,6 +98,9 @@ class encuesta_model extends CI_Model
             );
             $inserto = $this->db->insert("Encuestado",$UsuarioEncuestado);
             if($inserto){
+                $encuestado = $this->db->query("SELECT MAX(IdEncuestado) AS ID FROM Encuestado");
+
+                $idencuestado =  $encuestado->result_array()[0]["ID"];
                 $bandera = true;
             }
         }
@@ -106,6 +109,7 @@ class encuesta_model extends CI_Model
         foreach ($det as $obj) {
             $UsuarioRespuestas = array(
               "IdUsuario" => $id->result_array()[0]["ID"],//$this->session->userdata("id"),
+              "IdEncuestado" => $idencuestado,
               "IdPregunta" => $obj[0],
               "Resultado" => $obj[1], 
               "Respuesta" => '',
