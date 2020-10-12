@@ -32,14 +32,14 @@ class Encuesta_controller extends CI_Controller {
 
 	public function resolverencuesta($idencuesta)
     {
-        echo $this->session->userdata('id');
-        
+        //echo $this->session->userdata('id');
+
         $data["encabezado"] = $this->encuesta_model->getEncuestaID($idencuesta);
         $data["areas"] = $this->encuesta_model->getAreas();
         $data["preguntas"] = $this->encuesta_model->getPreguntaAResolver($idencuesta);
         $data["respuestas"] = $this->encuesta_model->getRespuestasAResolver($idencuesta);
         
-        //echo json_encode($data["preguntas"]);
+        //echo json_encode($data["encabezado"]);
         $this->load->view("header/header");
         $this->load->view("header/menu");
         $this->load->view('/encuesta/resolverencuesta',$data);
@@ -50,7 +50,12 @@ class Encuesta_controller extends CI_Controller {
     {
         $this->encuesta_model->guardarEncuesta(
             $this->input->post("enc"),
-            $this->input->post("datos")
+            $this->input->post("datos"),
+            $this->input->post("Nombre"),
+            $this->input->post("Edad"),
+            $this->input->post("Telefono"),
+            $this->input->post("Cedula"),
+            $this->input->post("Sexo")
         );
     }
 
